@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 ChatGPT Prompts for Actuarial Exams (P, FM, CS2) - Premium Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e5e7eb; /* Light gray background for screen view */
+        }
+
+        /* Page container styles */
+        .page {
+            background-color: #ffffff;
+            width: 8.5in; /* Standard US Letter width */
+            min-height: 11in; /* Ensure it takes at least full height */
+            height: auto; /* Allow content to expand height */
+            padding: 0.8in; /* Generous padding */
+            margin: 1rem auto; /* Center page on screen */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow for screen */
+            box-sizing: border-box; /* Include padding in width/height */
+            display: flex;
+            flex-direction: column;
+            position: relative; /* For footer positioning */
+        }
+
+        /* Page content area */
+        .page-content {
+            flex-grow: 1;
+        }
+
+        /* Footer styling within each page */
+        .page-footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6b7280; /* Gray text */
+            padding-top: 0.5rem;
+            border-top: 1px solid #e5e7eb; /* Light gray line */
+            margin-top: 1.5rem; /* Ensure some space above footer */
+        }
+
+        /* Cover page specific styles */
+        .cover-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #4f46e5, #3b82f6); /* Indigo to Blue gradient */
+            color: white;
+            height: 11in; /* Fixed height for cover */
+        }
+         .cover-page h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .cover-page h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        .cover-page .icon {
+             font-size: 4rem;
+             margin-bottom: 1.5rem;
+             color: #ffffff;
+        }
+         .cover-page .curator {
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            color: #d1d5db; /* Lighter text for curator */
+        }
+
+        /* Introduction page styles */
+        .intro-page { height: 11in; } /* Fixed height for intro */
+        .intro-page h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1f2937; /* Dark gray */
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3b82f6; /* Blue underline */
+            padding-bottom: 0.5rem;
+        }
+        .intro-page p, .intro-page li {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #374151; /* Medium gray */
+            margin-bottom: 1rem;
+        }
+        .intro-page strong {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        /* Prompt page styles */
+        .prompt-page .section-header {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #6b7280; /* Gray */
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .prompt-page .prompt-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3b82f6; /* Blue */
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .prompt-page .prompt-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1f2937; /* Dark gray */
+            background-color: #f3f4f6; /* Light gray background for prompt */
+            padding: 1rem;
+            border-radius: 0.375rem; /* Rounded corners */
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #3b82f6; /* Blue accent */
+        }
+        /* Styles for Key Topics and Follow-up Questions */
+        .prompt-page .subsection-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #4b5563; /* Darker gray */
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .prompt-page .subsection-title .icon {
+            margin-right: 0.5rem;
+            font-size: 1.1rem;
+            color: #6b7280; /* Medium gray icon */
+        }
+        .prompt-page .subsection-content {
+            font-size: 0.95rem;
+            color: #374151; /* Medium gray */
+            line-height: 1.6;
+            background-color: #f9fafb; /* Very light gray background */
+            padding: 0.75rem 1rem;
+            border-radius: 0.375rem;
+            border: 1px solid #e5e7eb; /* Light gray border */
+            margin-bottom: 1.5rem; /* Space below subsection */
+        }
+         .prompt-page .subsection-content ul {
+            list-style: disc;
+            list-style-position: inside;
+            padding-left: 0.5rem;
+         }
+         .prompt-page .subsection-content li {
+             margin-bottom: 0.25rem;
+         }
+
+        .prompt-page .use-case-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #10b981; /* Green */
+            margin-top: 1.5rem; /* Added margin top */
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+         .prompt-page .use-case-title .icon {
+             margin-right: 0.5rem;
+             font-size: 1.1rem;
+         }
+        .prompt-page .use-case-text {
+            font-size: 0.95rem;
+            color: #374151; /* Medium gray */
+            line-height: 1.6;
+            background-color: #f0fdf4; /* Very light green background */
+            padding: 0.75rem 1rem;
+            border-radius: 0.375rem;
+            border: 1px solid #d1fae5; /* Light green border */
+            margin-bottom: 1.5rem; /* Ensure space below use case */
+        }
+        /* Divider */
+        .prompt-page hr {
+            border-color: #e5e7eb; /* Light gray */
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+
+        /* Section-specific colors for prompt numbers/accents */
+        .section-p .prompt-number, .section-p .prompt-text { border-color: #3b82f6; } /* Blue */
+        .section-fm .prompt-number, .section-fm .prompt-text { border-color: #10b981; } /* Green */
+        .section-cs2 .prompt-number, .section-cs2 .prompt-text { border-color: #f97316; } /* Orange */
+        .section-bonus .prompt-number, .section-bonus .prompt-text { border-color: #6366f1; } /* Indigo */
+
+        .section-p .prompt-number { color: #3b82f6; }
+        .section-fm .prompt-number { color: #10b981; }
+        .section-cs2 .prompt-number { color: #f97316; }
+        .section-bonus .prompt-number { color: #6366f1; }
+
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                background-color: #ffffff; /* White background for print */
+                margin: 0;
+                padding: 0;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none; /* No shadow for print */
+                page-break-after: always; /* Ensure each .page is on a new sheet */
+                height: 10.9in; /* Try forcing height for print consistency, slightly less than 11 to avoid issues */
+                overflow: hidden; /* Hide overflow in print */
+            }
+            .page:last-child {
+                page-break-after: auto; /* No page break after the last page */
+            }
+            .no-print {
+                display: none; /* Hide screen-only elements */
+            }
+             /* Ensure colors and backgrounds print */
+            body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .cover-page {
+                 background: linear-gradient(135deg, #4f46e5, #3b82f6) !important; /* Force gradient print */
+                 color: white !important; /* Ensure text color prints */
+            }
+             .cover-page .icon, .cover-page .curator {
+                color: white !important; /* Ensure icon/curator text prints white */
+             }
+            .prompt-text, .use-case-text, .subsection-content {
+                background-color: #f3f4f6 !important; /* Force background print */
+            }
+             .use-case-text {
+                 background-color: #f0fdf4 !important;
+                 border: 1px solid #d1fae5 !important;
+             }
+             .subsection-content {
+                 background-color: #f9fafb !important;
+                 border: 1px solid #e5e7eb !important;
+             }
+             /* Ensure border colors print */
+             .prompt-text { border-left: 4px solid !important; }
+             .section-p .prompt-text { border-color: #3b82f6 !important; }
+             .section-fm .prompt-text { border-color: #10b981 !important; }
+             .section-cs2 .prompt-text { border-color: #f97316 !important; }
+             .section-bonus .prompt-text { border-color: #6366f1 !important; }
+
+             /* Ensure text colors print */
+             .prompt-number, .use-case-title, .subsection-title { color: inherit !important; } /* Reset color first */
+             .section-p .prompt-number { color: #3b82f6 !important; }
+             .section-fm .prompt-number { color: #10b981 !important; }
+             .section-cs2 .prompt-number { color: #f97316 !important; }
+             .section-bonus .prompt-number { color: #6366f1 !important; }
+             .use-case-title { color: #10b981 !important; } /* Green for use case title */
+             .subsection-title { color: #4b5563 !important; }
+             .subsection-title .icon { color: #6b7280 !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page cover-page">
+        <div class="page-content">
+            <i class="fas fa-brain icon"></i>
+            <h1>30 ChatGPT Prompts for Actuarial Exams</h1>
+            <h2>Study Smarter with AI for Exams P, FM, & CS2</h2>
+            <p class="curator">Curated by Rohan Gupta | Premium Guide</p>
+        </div>
+        </div>
+
+    <div class="page intro-page">
+        <div class="page-content">
+            <h2><i class="fas fa-book-open text-blue-600 mr-2"></i>Welcome & How to Use This Guide</h2>
+            <p>This guide provides 30 targeted ChatGPT prompts designed to help actuarial students master key concepts for Exams P (Probability), FM (Financial Mathematics), and CS2 (Modelling & Survival Models).</p>
+            <p>Think of ChatGPT as your AI study partner. Use these prompts to:</p>
+            <ul class="list-disc list-inside ml-4">
+                <li><strong>Deepen Understanding:</strong> Get clear explanations of complex topics, often with relatable examples.</li>
+                <li><strong>Practice Application:</strong> Work through problems, simulations, and case studies generated by AI.</li>
+                <li><strong>Identify Weaknesses:</strong> Use quizzes and targeted questions to find areas needing more focus.</li>
+                <li><strong>Explore Concepts:</strong> Ask "what if" questions and explore variations on core ideas.</li>
+            </ul>
+            <p><strong>Each page in this guide features:</strong></p>
+            <ul class="list-disc list-inside ml-4">
+                <li>A specific, ready-to-use <strong>Prompt</strong> for ChatGPT.</li>
+                <li>A list of relevant <strong>Key Topics</strong> covered by the prompt.</li>
+                <li>A suggested <strong>Use Case</strong> explaining *why* and *when* this prompt is helpful.</li>
+                <li>Ideas for <strong>Potential Follow-up Questions</strong> to ask ChatGPT for deeper exploration.</li>
+            </ul>
+             <p><strong>Bonus Tip:</strong> Don't just copy and paste! Modify these prompts. Add details like "explain like I'm 15," ask for Python code, request different scenarios, or specify the desired output format (e.g., "summarize in bullet points"). The more specific you are, the better ChatGPT can assist you.</p>
+             <p>Good luck with your studies!</p>
+        </div>
+        <div class="page-footer">Introduction</div>
+    </div>
+
+    <div class="page prompt-page section-p">
+        <div class="page-content">
+            <div class="section-header">Exam P: Probability</div>
+            <div class="prompt-number">1</div>
+            <div class="prompt-text">Explain the difference between Probability Density Function (PDF) and Cumulative Distribution Function (CDF) using an insurance claim amount example.</div>
+
+            <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Continuous Random Variables</li>
+                    <li>Probability Functions</li>
+                    <li>Integration in Probability</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Solidify your understanding of fundamental probability distribution concepts (PDF vs. CDF) by applying them to a relatable insurance scenario, making abstract ideas more concrete before tackling complex problems.</div>
+
+            <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Can you graph the PDF and CDF for an exponential distribution with lambda=0.1?"</li>
+                    <li>"How do you find the probability P(a < X <= b) using the CDF?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam P - Prompt 1</div>
+    </div>
+
+    <div class="page prompt-page section-p">
+        <div class="page-content">
+            <div class="section-header">Exam P: Probability</div>
+            <div class="prompt-number">2</div>
+            <div class="prompt-text">Create 3 practice questions on conditional probability involving policyholder demographics (e.g., age, location) and claim frequency, providing detailed step-by-step solutions.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Conditional Probability P(A|B)</li>
+                    <li>Bayes' Theorem (Implicitly)</li>
+                    <li>Contingency Tables / Data Interpretation</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Practice applying conditional probability rules, a frequently tested topic, in realistic insurance contexts. The detailed solutions help identify and correct misunderstandings in your approach.</div>
+
+            <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Generate another question but focus on independence between events."</li>
+                    <li>"Explain the difference between P(A|B) and P(B|A) using one of these examples."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam P - Prompt 2</div>
+    </div>
+
+     <div class="page prompt-page section-p">
+        <div class="page-content">
+            <div class="section-header">Exam P: Probability</div>
+            <div class="prompt-number">3</div>
+            <div class="prompt-text">Summarize the law of total probability using a medical insurance case study involving different health statuses and the probability of needing a specific treatment.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Law of Total Probability</li>
+                    <li>Partitioning Sample Space</li>
+                    <li>Weighted Averages</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Grasp the intuition and application of the law of total probability by seeing it used in a practical scenario, helping you break down complex probability problems into manageable parts.</div>
+
+            <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"How does this relate to calculating expected values using conditioning?"</li>
+                    <li>"Can you create a similar example using auto insurance risk classes?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam P - Prompt 3</div>
+    </div>
+
+     <div class="page prompt-page section-p">
+        <div class="page-content">
+            <div class="section-header">Exam P: Probability</div>
+            <div class="prompt-number">4</div>
+            <div class="prompt-text">Walk me through solving a binomial distribution problem step by step, related to the number of policies lapsing in a small portfolio.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Binomial Distribution (Assumptions, PMF)</li>
+                    <li>Discrete Random Variables</li>
+                    <li>Combinations (nCr)</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Master the mechanics of applying the binomial distribution, a common discrete distribution on Exam P. The step-by-step guidance clarifies the calculation process and underlying assumptions.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"What is the expected number of lapses in this scenario?"</li>
+                    <li>"How would this change if the probability of lapsing was different for each policy (i.e., not binomial)?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam P - Prompt 4</div>
+    </div>
+
+     <div class="page prompt-page section-p">
+        <div class="page-content">
+            <div class="section-header">Exam P: Probability</div>
+            <div class="prompt-number">5</div>
+            <div class="prompt-text">Compare and contrast discrete versus continuous probability distributions using examples relevant to insurance, such as the number of claims (discrete) versus the claim severity amount (continuous).</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Types of Random Variables</li>
+                    <li>Probability Mass Function (PMF) vs. Probability Density Function (PDF)</li>
+                    <li>Summation vs. Integration</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Clarify the fundamental differences between discrete and continuous distributions, which is crucial for selecting the correct formulas and approaches when modeling different types of random events in insurance.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Give an example of a mixed distribution in insurance."</li>
+                    <li>"How does calculating expected value differ between discrete and continuous cases?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam P - Prompt 5</div>
+    </div>
+
+     <div class="page prompt-page section-p">
+        <div class="page-content">
+            <div class="section-header">Exam P: Probability</div>
+            <div class="prompt-number">6</div>
+            <div class="prompt-text">Generate 5 multiple-choice questions covering the concepts of expected value (E[X]) and variance (Var[X]) for common distributions (e.g., Poisson, Exponential), including solutions and explanations.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Expected Value (Mean)</li>
+                    <li>Variance and Standard Deviation</li>
+                    <li>Properties of Common Distributions (Poisson, Exponential, Normal, Uniform etc.)</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Test your knowledge of calculating and interpreting expectation and variance for key distributions. The MCQ format simulates exam conditions, and explanations reinforce learning.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Generate questions about the skewness or kurtosis of these distributions."</li>
+                    <li>"Create a question involving the expected value of a function of a random variable, E[g(X)]."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam P - Prompt 6</div>
+    </div>
+
+     <div class="page prompt-page section-p">
+        <div class="page-content">
+            <div class="section-header">Exam P: Probability</div>
+            <div class="prompt-number">7</div>
+            <div class="prompt-text">Simulate a simple discrete random variable (like rolling a biased die representing claim events) in Python, explain the code logic, and calculate its sample mean and variance.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Simulation / Monte Carlo Basics</li>
+                    <li>Python Programming (e.g., NumPy, random)</li>
+                    <li>Sample Statistics vs. Population Parameters</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Gain practical, hands-on experience with probability concepts by simulating them in code. This bridges the gap between theoretical knowledge and computational application, a valuable skill for actuaries.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"How does the sample mean change as you increase the number of simulations?"</li>
+                    <li>"Simulate drawing from a Poisson distribution instead."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam P - Prompt 7</div>
+    </div>
+
+     <div class="page prompt-page section-p">
+        <div class="page-content">
+            <div class="section-header">Exam P: Probability</div>
+            <div class="prompt-number">8</div>
+            <div class="prompt-text">Explain the concept and application of moment-generating functions (MGFs) with examples for distributions like the Normal or Gamma distribution, focusing on how they help find moments.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Moment Generating Functions (MGFs)</li>
+                    <li>Derivatives for Moments</li>
+                    <li>Uniqueness Property of MGFs</li>
+                    <li>Sums of Independent Random Variables</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Understand the purpose and utility of MGFs, a powerful tool for deriving moments (like mean and variance) and identifying distributions, often appearing in more theoretical Exam P questions.</div>
+
+            <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Show how to find the MGF for a sum of two independent Poisson variables."</li>
+                    <li>"What happens if the MGF does not exist for certain values of t?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam P - Prompt 8</div>
+    </div>
+
+     <div class="page prompt-page section-p">
+        <div class="page-content">
+            <div class="section-header">Exam P: Probability</div>
+            <div class="prompt-number">9</div>
+            <div class="prompt-text">What’s the intuition behind Bayes' theorem when used in assessing the probability of a fraudulent insurance claim given certain indicators? Provide a simple numerical example.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Bayes' Theorem</li>
+                    <li>Prior and Posterior Probabilities</li>
+                    <li>Conditional Probability</li>
+                    <li>Updating Beliefs with Evidence</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Develop an intuitive understanding of Bayes' theorem, essential for updating probabilities based on new evidence. The fraud detection example makes its practical relevance clear.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Explain the role of the 'base rate' (prior probability) in the final result."</li>
+                    <li>"Create another example related to medical diagnosis."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam P - Prompt 9</div>
+    </div>
+
+     <div class="page prompt-page section-p">
+        <div class="page-content">
+            <div class="section-header">Exam P: Probability</div>
+            <div class="prompt-number">10</div>
+            <div class="prompt-text">List 5 practical tips or common pitfalls to avoid when solving probability problems typically found in the Exam P syllabus.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Exam Taking Strategy</li>
+                    <li>Common Errors (e.g., independence assumptions, distribution choice)</li>
+                    <li>Problem Interpretation</li>
+                    <li>Time Management</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Improve your exam strategy by learning about common mistakes and effective techniques specifically for Exam P probability questions, helping you avoid losing points on errors.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Can you elaborate on tip number [X] with an example?"</li>
+                    <li>"What are some tips specifically for questions involving joint distributions?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam P - Prompt 10</div>
+    </div>
+
+    <div class="page prompt-page section-fm">
+        <div class="page-content">
+            <div class="section-header">Exam FM: Financial Mathematics</div>
+            <div class="prompt-number">11</div>
+            <div class="prompt-text">Teach me the concepts of Macaulay duration and Modified Convexity as if I’m 15 years old, using a simple loan or bond example.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Interest Rate Risk</li>
+                    <li>Bond Price Sensitivity</li>
+                    <li>Duration (Macaulay, Modified)</li>
+                    <li>Convexity</li>
+                    <li>Approximating Price Changes</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Quickly grasp the core ideas of duration and convexity, crucial for understanding bond price sensitivity to interest rate changes, through a simplified explanation suitable for beginners or for a quick refresher.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"How does the coupon rate affect duration?"</li>
+                    <li>"Show me the formula for calculating modified duration from Macaulay duration."</li>
+                    <li>"Why is convexity generally desirable for bondholders?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam FM - Prompt 11</div>
+    </div>
+
+     <div class="page prompt-page section-fm">
+        <div class="page-content">
+            <div class="section-header">Exam FM: Financial Mathematics</div>
+            <div class="prompt-number">12</div>
+            <div class="prompt-text">Draft a complete bond amortization schedule for a 5-year bond with a face value of $1000, a 4% annual coupon rate paid semi-annually, and a yield rate of 5% compounded semi-annually.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Bond Valuation</li>
+                    <li>Amortization of Premium/Discount</li>
+                    <li>Book Value / Carrying Value</li>
+                    <li>Effective Interest Method</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Practice the detailed calculations involved in bond amortization (premium or discount). Seeing the full schedule helps visualize how book value changes over time.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"What would the schedule look like if the yield rate was 3% (bond sold at a premium)?"</li>
+                    <li>"Calculate the total amount of discount amortized over the bond's life."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam FM - Prompt 12</div>
+    </div>
+
+     <div class="page prompt-page section-fm">
+        <div class="page-content">
+            <div class="section-header">Exam FM: Financial Mathematics</div>
+            <div class="prompt-number">13</div>
+            <div class="prompt-text">Explain the difference between an annuity-due and an ordinary annuity using timelines and graphs. Calculate the present value of both for a $100 payment over 4 periods at 6% interest.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Annuities (Ordinary, Due)</li>
+                    <li>Time Value of Money (TVM)</li>
+                    <li>Present Value Calculations</li>
+                    <li>Timing of Cash Flows</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Solidify your understanding of the timing difference between annuity-due and ordinary annuity payments, a common source of errors. Visual aids and calculations reinforce the distinction.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"How do the future values of these two annuities compare?"</li>
+                    <li>"Show the relationship between the PV of an ordinary annuity and an annuity-due."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam FM - Prompt 13</div>
+    </div>
+
+     <div class="page prompt-page section-fm">
+        <div class="page-content">
+            <div class="section-header">Exam FM: Financial Mathematics</div>
+            <div class="prompt-number">14</div>
+            <div class="prompt-text">List and explain 3 typical trick questions or common misunderstandings encountered in Exam FM problems related to topics like varying annuities, balloon payments, or reinvestment rates.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Advanced Annuity Concepts</li>
+                    <li>Loan Structures</li>
+                    <li>Interest Rate Assumptions</li>
+                    <li>Exam Question Patterns</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Become aware of common traps and tricky question formats used in Exam FM. Recognizing these patterns can help you avoid mistakes under exam pressure.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Give an example problem illustrating trick number [X]."</li>
+                    <li>"Are there common tricks related to nominal vs. effective rates?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam FM - Prompt 14</div>
+    </div>
+
+     <div class="page prompt-page section-fm">
+        <div class="page-content">
+            <div class="section-header">Exam FM: Financial Mathematics</div>
+            <div class="prompt-number">15</div>
+            <div class="prompt-text">Simulate the functionality of a basic financial calculator using ChatGPT prompts. Ask me to calculate Present Value (PV), Future Value (FV), Interest Rate (i), and Number of Periods (N) based on given inputs for standard annuities.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Time Value of Money (TVM) Variables</li>
+                    <li>Annuity Formulas (PV, FV)</li>
+                    <li>Solving for Rate (i) or Periods (N)</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Practice core time value of money calculations without relying solely on a physical calculator. This helps internalize the relationships between PV, FV, i, N, and PMT.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Calculate the payment (PMT) needed for a given PV or FV."</li>
+                    <li>"Do the same calculation but assume payments are made at the beginning of the period (annuity-due)."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam FM - Prompt 15</div>
+    </div>
+
+     <div class="page prompt-page section-fm">
+        <div class="page-content">
+            <div class="section-header">Exam FM: Financial Mathematics</div>
+            <div class="prompt-number">16</div>
+            <div class="prompt-text">Walk through a sample loan repayment table (amortization schedule) for a $10,000 loan over 3 years at an 8% annual effective interest rate, showing interest paid and principal repaid each year.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Loan Amortization</li>
+                    <li>Interest Calculation</li>
+                    <li>Principal Repayment</li>
+                    <li>Outstanding Loan Balance</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Understand the mechanics of loan amortization, seeing how each payment is split between interest and principal reduction. Essential for loan-related questions.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"What is the total interest paid over the life of the loan?"</li>
+                    <li>"How would the schedule change if there was an extra principal payment in year 2?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam FM - Prompt 16</div>
+    </div>
+
+     <div class="page prompt-page section-fm">
+        <div class="page-content">
+            <div class="section-header">Exam FM: Financial Mathematics</div>
+            <div class="prompt-number">17</div>
+            <div class="prompt-text">Create 5 quick-fire quiz questions covering fundamental interest theory concepts like simple interest, compound interest, effective vs. nominal rates, and force of interest. Provide answers.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Simple vs. Compound Interest</li>
+                    <li>Effective Annual Rate (EAR)</li>
+                    <li>Nominal Rates (Compounded m-thly)</li>
+                    <li>Force of Interest (δ)</li>
+                    <li>Discount Rate (d)</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Quickly test your recall and understanding of the most basic building blocks of interest theory. Ideal for rapid review sessions.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Generate questions converting between different rate types (nominal, effective, force)."</li>
+                    <li>"Create a question involving the accumulation function a(t)."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam FM - Prompt 17</div>
+    </div>
+
+     <div class="page prompt-page section-fm">
+        <div class="page-content">
+            <div class="section-header">Exam FM: Financial Mathematics</div>
+            <div class="prompt-number">18</div>
+            <div class="prompt-text">Write a short, relatable story to explain the core concept of the time value of money, perhaps involving saving for a future goal or comparing investment choices.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Time Value of Money (Core Principle)</li>
+                    <li>Opportunity Cost</li>
+                    <li>Inflation (Implicitly)</li>
+                    <li>Present vs. Future Value Intuition</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Build intuition for the fundamental principle of time value of money (TVM) through a narrative approach, making the concept more memorable and less abstract.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Can you write another story illustrating the power of compounding?"</li>
+                    <li>"How does the concept of discounting fit into this story?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam FM - Prompt 18</div>
+    </div>
+
+     <div class="page prompt-page section-fm">
+        <div class="page-content">
+            <div class="section-header">Exam FM: Financial Mathematics</div>
+            <div class="prompt-number">19</div>
+            <div class="prompt-text">How do zero-coupon bonds behave when market interest rates rise or fall? Explain their price sensitivity compared to coupon-paying bonds.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Zero-Coupon Bonds</li>
+                    <li>Interest Rate Risk</li>
+                    <li>Duration (Relationship to Maturity for ZCBs)</li>
+                    <li>Price Volatility</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Understand the specific interest rate risk characteristics of zero-coupon bonds and how they differ from coupon bonds, a key concept in fixed-income analysis.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Why is the Macaulay duration of a zero-coupon bond equal to its maturity?"</li>
+                    <li>"Compare the convexity of a zero-coupon bond to a similar maturity coupon bond."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam FM - Prompt 19</div>
+    </div>
+
+     <div class="page prompt-page section-fm">
+        <div class="page-content">
+            <div class="section-header">Exam FM: Financial Mathematics</div>
+            <div class="prompt-number">20</div>
+            <div class="prompt-text">Generate a concise case study comparing two investment options: Option A requires an initial investment and provides steady annual returns, while Option B involves deferred returns but a larger payout later. Analyze which is better based on a given discount rate using Net Present Value (NPV).</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Net Present Value (NPV)</li>
+                    <li>Discounted Cash Flow (DCF) Analysis</li>
+                    <li>Investment Decision Rules</li>
+                    <li>Project Appraisal</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Apply TVM concepts, specifically NPV, to a practical decision-making scenario. This helps practice project appraisal techniques often tested on Exam FM.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"How would the decision change if the discount rate was higher/lower?"</li>
+                    <li>"Calculate the Internal Rate of Return (IRR) for both options."</li>
+                    <li>"What are some limitations of using NPV for this comparison?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam FM - Prompt 20</div>
+    </div>
+
+    <div class="page prompt-page section-cs2">
+        <div class="page-content">
+            <div class="section-header">Exam CS2: Modelling & Survival Models</div>
+            <div class="prompt-number">21</div>
+            <div class="prompt-text">Simplify the core idea and purpose of the Cox proportional hazards model in under 200 words, focusing on its application in survival analysis.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Survival Analysis</li>
+                    <li>Cox Proportional Hazards Model</li>
+                    <li>Hazard Ratios</li>
+                    <li>Semi-parametric Models</li>
+                    <li>Covariate Effects</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Get a quick, high-level understanding of the Cox model, a cornerstone of survival analysis, focusing on what it does and why it's used, without getting bogged down in complex math initially.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"What does 'proportional hazards' mean?"</li>
+                    <li>"What is the baseline hazard function in the Cox model?"</li>
+                    <li>"How do you interpret a hazard ratio of 1.5?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam CS2 - Prompt 21</div>
+    </div>
+
+     <div class="page prompt-page section-cs2">
+        <div class="page-content">
+            <div class="section-header">Exam CS2: Modelling & Survival Models</div>
+            <div class="prompt-number">22</div>
+            <div class="prompt-text">What are the key assumptions underlying Markov chain models when used for modeling transitions between health states (e.g., healthy, sick, deceased) in health insurance?</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Markov Chains / Markov Processes</li>
+                    <li>State Space Models</li>
+                    <li>Markov Property (Memorylessness)</li>
+                    <li>Time Homogeneity</li>
+                    <li>Transition Probabilities / Intensities</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Understand the theoretical basis and limitations of Markov models, which are frequently used in actuarial modeling (especially health and life insurance). Knowing the assumptions is key to applying them correctly.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"What happens if the Markov property is violated?"</li>
+                    <li>"Explain the difference between a discrete-time and continuous-time Markov chain."</li>
+                    <li>"Give an example where the time homogeneity assumption might not hold."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam CS2 - Prompt 22</div>
+    </div>
+
+     <div class="page prompt-page section-cs2">
+        <div class="page-content">
+            <div class="section-header">Exam CS2: Modelling & Survival Models</div>
+            <div class="prompt-number">23</div>
+            <div class="prompt-text">Explain the Kaplan-Meier estimator step-by-step using a small, hypothetical dataset of patient survival times after a specific treatment. Show the calculation of survival probabilities at different time points.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Kaplan-Meier Estimator</li>
+                    <li>Survival Function Estimation</li>
+                    <li>Censored Data (Right-Censoring)</li>
+                    <li>Non-parametric Methods</li>
+                    <li>Number at Risk</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Master the calculation and interpretation of the Kaplan-Meier survival curve, a fundamental non-parametric method for analyzing time-to-event data, often dealing with censored observations.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"How do you calculate the standard error or confidence interval for the Kaplan-Meier estimate?"</li>
+                    <li>"What is the Greenwood formula used for?"</li>
+                    <li>"How does Kaplan-Meier handle tied event times?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam CS2 - Prompt 23</div>
+    </div>
+
+     <div class="page prompt-page section-cs2">
+        <div class="page-content">
+            <div class="section-header">Exam CS2: Modelling & Survival Models</div>
+            <div class="prompt-number">24</div>
+            <div class="prompt-text">Write a practice question on time-to-event modeling (survival analysis) using a real-life context like policy surrender or equipment failure. Include data and ask for an interpretation of the survival function.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Time-to-Event Analysis Applications</li>
+                    <li>Survival Function S(t)</li>
+                    <li>Interpreting Survival Probabilities</li>
+                    <li>Competing Risks (Potentially)</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Apply survival analysis techniques to a practical problem beyond just mortality, demonstrating your ability to interpret survival functions in different contexts relevant to actuarial work.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Estimate the median time-to-event based on this data."</li>
+                    <li>"How would you model the effect of covariates (e.g., policy size, equipment age) on surrender/failure time?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam CS2 - Prompt 24</div>
+    </div>
+
+     <div class="page prompt-page section-cs2">
+        <div class="page-content">
+            <div class="section-header">Exam CS2: Modelling & Survival Models</div>
+            <div class="prompt-number">25</div>
+            <div class="prompt-text">Show the fundamental differences between deterministic models (e.g., projecting cash flows with fixed assumptions) and stochastic models (e.g., incorporating randomness in variables like interest rates or mortality) in an insurance context.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Deterministic vs. Stochastic Modeling</li>
+                    <li>Point Estimates vs. Distributions</li>
+                    <li>Risk Assessment</li>
+                    <li>Parameter Uncertainty</li>
+                    <li>Process Risk</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Clarify the distinction between deterministic and stochastic modeling approaches, understanding when each is appropriate and the implications of incorporating (or not incorporating) randomness.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"When might a deterministic model be sufficient?"</li>
+                    <li>"What are the advantages of using stochastic models for reserving or capital assessment?"</li>
+                    <li>"Give an example of a stochastic model for interest rates."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam CS2 - Prompt 25</div>
+    </div>
+
+     <div class="page prompt-page section-cs2">
+        <div class="page-content">
+            <div class="section-header">Exam CS2: Modelling & Survival Models</div>
+            <div class="prompt-number">26</div>
+            <div class="prompt-text">Summarize the basic idea of Monte Carlo simulation. Provide a simple example, perhaps simulating the aggregate claims for a small portfolio where claim frequency and severity are random variables.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Monte Carlo Simulation</li>
+                    <li>Random Number Generation</li>
+                    <li>Aggregate Loss Modeling</li>
+                    <li>Frequency-Severity Models</li>
+                    <li>Distribution of Outcomes</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Grasp the concept of Monte Carlo methods, a powerful technique for stochastic modeling, by seeing a simplified application relevant to calculating aggregate insurance losses.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"How would you incorporate dependence between frequency and severity in the simulation?"</li>
+                    <li>"Explain how to use the simulation results to estimate Value-at-Risk (VaR)."</li>
+                    <li>"What are some variance reduction techniques in Monte Carlo?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam CS2 - Prompt 26</div>
+    </div>
+
+     <div class="page prompt-page section-cs2">
+        <div class="page-content">
+            <div class="section-header">Exam CS2: Modelling & Survival Models</div>
+            <div class="prompt-number">27</div>
+            <div class="prompt-text">Create an exercise involving calculating probabilities for joint life statuses (e.g., probability that at least one of two lives aged x and y survives t years) and last survivor statuses, providing the necessary commutation functions or assumptions and solutions.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Multiple Life Functions</li>
+                    <li>Joint Life Status (T(xy))</li>
+                    <li>Last Survivor Status (T(xy bar))</li>
+                    <li>Probabilities (t p xy, t q xy)</li>
+                    <li>Assuming Independence</li>
+                    <li>Commutation Functions (Optional)</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Practice calculations involving multiple lives, a key topic in life contingencies relevant for pricing joint life insurance or annuities.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Calculate the expected present value of a joint life annuity."</li>
+                    <li>"How do these calculations change if the lives are not independent (e.g., common shock)?"</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam CS2 - Prompt 27</div>
+    </div>
+
+     <div class="page prompt-page section-cs2">
+        <div class="page-content">
+            <div class="section-header">Exam CS2: Modelling & Survival Models</div>
+            <div class="prompt-number">28</div>
+            <div class="prompt-text">Walk me through the essential steps involved in validating a new predictive model developed by an insurer, covering aspects like data checks, goodness-of-fit tests, and back-testing.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Model Validation Process</li>
+                    <li>Data Quality Assessment</li>
+                    <li>Goodness-of-Fit (e.g., Chi-squared, AIC/BIC)</li>
+                    <li>Out-of-Sample Testing / Back-testing</li>
+                    <li>Sensitivity Analysis</li>
+                    <li>Model Documentation</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Understand the practical process of model validation, a critical aspect of actuarial work ensuring models are reliable and fit for purpose. This goes beyond just building the model.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Explain the difference between in-sample and out-of-sample validation."</li>
+                    <li>"What are some common metrics used in back-testing?"</li>
+                    <li>"Describe how you might validate the assumptions of a model."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam CS2 - Prompt 28</div>
+    </div>
+
+     <div class="page prompt-page section-cs2">
+        <div class="page-content">
+            <div class="section-header">Exam CS2: Modelling & Survival Models</div>
+            <div class="prompt-number">29</div>
+            <div class="prompt-text">Draft the outline for an open-book style case study suitable for a CS2 research project, perhaps involving the calibration of a mortality model or the assessment of longevity risk for a pension plan.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Actuarial Modeling Applications</li>
+                    <li>Mortality Modeling / Calibration</li>
+                    <li>Longevity Risk</li>
+                    <li>Pension Plan Valuation</li>
+                    <li>Case Study Structure</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Get a feel for the scope and structure of larger, more applied actuarial modeling projects, similar to what might be encountered in later exams or professional work.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Flesh out section [X] of the outline with more detail."</li>
+                    <li>"What data sources would be needed for this case study?"</li>
+                    <li>"Suggest some potential modeling techniques that could be used."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam CS2 - Prompt 29</div>
+    </div>
+
+     <div class="page prompt-page section-cs2">
+        <div class="page-content">
+            <div class="section-header">Exam CS2: Modelling & Survival Models</div>
+            <div class="prompt-number">30</div>
+            <div class="prompt-text">Teach me the concept of the force of mortality (hazard rate) using a relatable, non-technical analogy, perhaps comparing it to the 'risk intensity' at a specific age.</div>
+
+             <div class="subsection-title"><i class="fas fa-tags icon"></i>Key Topics:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>Force of Mortality (μₓ) / Hazard Rate</li>
+                    <li>Instantaneous Rate of Failure</li>
+                    <li>Relationship to Survival Function S(t) and PDF f(t)</li>
+                    <li>Mortality Laws (e.g., Gompertz, Makeham)</li>
+                </ul>
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title"><i class="fas fa-lightbulb icon"></i>Use Case:</div>
+            <div class="use-case-text">Build intuition for the force of mortality (μₓ), a fundamental concept in survival models, by connecting it to a more easily understood analogy before diving into its mathematical definition.</div>
+
+             <div class="subsection-title"><i class="fas fa-question-circle icon"></i>Potential Follow-up Questions:</div>
+            <div class="subsection-content">
+                <ul>
+                    <li>"Show the mathematical relationship between μₓ, S(x), and f(x)."</li>
+                    <li>"How does the force of mortality typically change with age?"</li>
+                    <li>"Explain how μₓ is used in calculating survival probabilities over short intervals."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-footer">Exam CS2 - Prompt 30</div>
+    </div>
+
+    <div class="page prompt-page section-bonus">
+         <div class="page-content">
+            <div class="section-header">Bonus Section</div>
+            <div class="prompt-number"><i class="fas fa-wand-magic-sparkles"></i></div>
+            <div class="prompt-text" style="border-color: #6366f1; font-size: 1.25rem; text-align: center; background-color: #eef2ff;">
+                How to Use These Prompts Better: Power-Up Your AI Study Sessions
+            </div>
+
+            <hr/>
+
+            <div class="use-case-title" style="color: #6366f1;"><i class="fas fa-star icon"></i>Maximizing Value:</div>
+            <div class="use-case-text" style="background-color: #f5f3ff; border-color: #ede9fe;">
+                <ul class="list-disc list-inside space-y-3">
+                    <li><strong>Simplify:</strong> Add phrases like `"explain like I'm 15"` or `"explain in simple terms"` to get easier-to-understand answers, especially for complex topics.</li>
+                    <li><strong>Guided Learning:</strong> Ask ChatGPT to `"give me a hint only"` for a specific problem, try solving it yourself, and then ask for the full solution to check your work.</li>
+                    <li><strong>Vary Parameters:</strong> Reuse prompts but change the inputs. For example, ask for the bond schedule with a different coupon rate, or explain a distribution using a different real-world scenario.</li>
+                    <li><strong>Practical Application:</strong> Request examples using specific tools like `"Show me how to simulate this in Python"` or `"Create an example using Excel formulas"` for hands-on learning and practical skill-building.</li>
+                    <li><strong>Specify Format:</strong> Ask for responses in specific formats like `"Summarize this in bullet points"`, `"Create a comparison table"`, or `"Generate multiple-choice questions"`.</li>
+                     <li><strong>Go Deeper:</strong> After getting an initial answer, ask follow-up questions like `"Can you elaborate on that assumption?"` or `"What are the limitations of this model?"`</li>
+                     <li><strong>Combine Prompts:</strong> Try merging ideas from different prompts, e.g., "Simulate the bond amortization schedule from prompt 12 in Python."</li>
+                </ul>
+            </div>
+
+            </div>
+        <div class="page-footer">Bonus Tips</div>
+    </div>
+
+
+</body>
+</html>
